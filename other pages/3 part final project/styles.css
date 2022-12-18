@@ -1,0 +1,134 @@
+html, body {
+  min-width: 290px;
+  color: #4d4e53;
+  background-color: #ffffff;
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  min-width: 290px;
+  height: 100%;
+  border-right: solid;
+  border-color: rgba(0, 22, 22, 0.4);
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 310px;
+  margin-bottom: 110px;
+  padding: 20px;
+}
+
+header {
+  display: block;
+  text-align: center;
+  margin: 10px;
+  font-size: 1.8em;
+  color: black;
+}
+
+#main-doc header {
+  margin: 0px;
+  text-align: left;
+}
+
+article {
+  display: block;
+}
+
+section article {
+  color: #4d4e53;
+  margin: 15px;
+  font-size: 0.96em;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+section li {
+  margin: 15px 0px 0px 20px;
+}
+
+li {
+  display: list-item;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre-line;
+  position: relative;
+  margin: 10px;
+  padding: 15px;
+  background-color: #f7f7f7;
+  line-height: 2;
+  border-radius: 5px;
+  word-break: normal;
+  word-wrap: normal;
+}
+
+#navbar li {
+  border-top: 1px solid;
+  list-style-type: none;
+}
+
+#last-link{
+  border-bottom: 1px solid;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: #4d4e53;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#navbar ul {
+  padding: 0;
+}
+
+@media only screen and (max-width: 815px) {
+  /* For mobile phones: */
+  #navbar {
+    display: block;
+    background-color: white;
+    width: 100%;
+    max-height: 700px;
+    border: none;
+    z-index: 1;
+    position: relative;
+  }
+
+  #main-doc {
+    display: block;
+    position: relative;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #main-doc {
+    margin-left: -10px;
+    margin-bottom: 0px;
+  }
+
+  #main-doc ul {
+    padding: 0px;
+  }
+
+  #main-doc article {
+    margin-left: 0px;
+  }
+}

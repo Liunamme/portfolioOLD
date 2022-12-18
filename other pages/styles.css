@@ -1,0 +1,316 @@
+/* START Common parameters */
+:root {
+  --color-main: #101113;
+  --color-work: #2d2e31;
+  --color1: #C7493A;
+  --color2: #A33327;
+  --color3: #689775;
+  --color4: #917164;
+  --color5: #AD8174;
+  --main-white: #f0f0f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-work);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+}
+/* END Common parameters */
+
+/* START HEADER */
+#nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color2);
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+#nav a {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--main-white);
+  text-shadow: 1px 1px 1px black;
+  text-decoration: none;
+}
+
+#nav #home,
+#nav #navigation li {
+  padding: 2rem;
+}
+
+#nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+#nav #home:hover, 
+#nav ul li:hover {
+  background-color: var(--color1);
+}
+/* END HEADER  */
+
+/* START ADAPTABILITY */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* START MAIN  */
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* START WORK  */
+
+main #work {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--color-work);
+  padding: 10rem 0;
+}
+
+#work h2 {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 6rem auto;
+  border-bottom: 0.2rem solid var(--main-white);
+  font-size: 4.2rem;
+  color: var(--main-white);
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 0 auto;
+  justify-content: center;
+  padding-bottom: 5rem;
+}
+
+.project-tile {
+  flex-grow: 1;
+  background-color: var(--color-main);
+  text-align: center;
+  color: var(--main-white);
+  width: 400px;
+  max-width: 400px;
+  border-radius: 20px;
+  transition: 0.3s ease-in-out;
+  transition-delay: 0ms;
+}
+
+.project-tile:hover {
+  transform: scale(1.1);
+}
+
+.project-image {
+  width: 100%;
+  height: calc(100% - 6.8rem);
+  max-height: 40rem;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
+
+.project-tile:hover img {
+  opacity: 1;
+}
+
+.project-title {
+  padding: 1.5rem 0.5rem;
+}
+
+.free-slot {
+  opacity: 0.5;
+}
+
+.code {
+  color: var(--color-main);
+  transition: color 0.3s ease-out;
+}
+
+.project-tile:hover .code {
+  color: var(--color2);
+}
+
+.project-tile:active {
+  color: var(--color2);
+}
+
+.btn {
+  padding: 1rem 2rem;
+}
+
+/* END WORK  */
+
+
+/* END MAIN  */
+
+/* START FOOTER  */
+
+.footer {
+  font-weight: 300;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+  background: var(--color-main);
+  border-top: 4px solid var(--color2);
+  color: var(--main-white);
+}
+
+.footer a {
+  color: var(--main-white);
+}
+
+.footer > p {
+  margin: 2rem;
+}
+
+.footer i {
+  vertical-align: middle;
+}
+
+@media (max-width: 28.75em) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* END FOOTER  */
+
+
+
+
+
+
+
+/* START ADAPTABILITY */
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 1280px) {
+
+  #work h2 {
+    padding-top: 10rem;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  #work h2 {
+    padding-top: 10rem;
+    margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 610px) {
+
+  #work h2 {
+    transform: scale(0.9);
+    padding-top: 10rem;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 540px) {
+
+  #work h2 {
+    transform: scale(0.9);
+    padding-top: 10rem;
+    margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 440px) {
+
+  .project-tile {
+    transform: scale(0.9);
+  }
+
+  .project-tile:hover {
+    transform: scale(0.8);
+  }
+
+  #work h2 {
+    transform: scale(0.9);
+    padding-top: 10rem;
+    margin-bottom: 0;
+  }
+
+}
+
+@media (max-width: 390px) {
+
+  .project-tile {
+    transform: scale(0.9);
+  }
+
+  .project-tile:hover {
+    transform: scale(0.8);
+  }
+
+  #work h2 {
+    transform: scale(0.9);
+    padding-top: 10rem;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 375px) {
+
+  .project-tile {
+    transform: scale(0.9);
+  }
+
+  .project-tile:hover {
+    transform: scale(0.8);
+  }
+}
+
+/* END ADAPTABILITY */
